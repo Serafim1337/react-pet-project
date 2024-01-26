@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.css","mappings":"AACE,aACE,UACA,e","sources":["webpack://react-pet-project/./src/pages/HomePage/HomePage.scss"],"sourcesContent":[".HomePage {\r\n  h1 {\r\n    color: red;\r\n    font-size: 40px;\r\n  }\r\n}\r\n"],"names":[],"sourceRoot":""}
