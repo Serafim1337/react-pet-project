@@ -1,8 +1,9 @@
+const webpack = require("webpack");
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
-const ESLintPlugin = require("eslint-webpack-plugin");
-
+// const ESLintPlugin = require("eslint-webpack-plugin");
+require("dotenv").config({ path: "src/firebase/.env" });
 module.exports = {
   entry: "./src/index.js",
 
@@ -18,7 +19,10 @@ module.exports = {
     new MiniCSSExtractPlugin({
       filename: "bundle.css",
     }),
-    new ESLintPlugin(),
+    // new ESLintPlugin(),
+    new webpack.DefinePlugin({
+      "process.env": JSON.stringify(process.env),
+    }),
   ],
 
   devtool: "source-map",
